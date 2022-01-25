@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>APP Docker-Mongo</title>
+</head>
+<body>
+    <button id="showUser">MOSTAR USUARIOS</button>
+    <button id="newUser">CREAR USUARIO</button>
+    <button id="deleteAll">ELIMINAR USUARIOS</button>
+    <button id="deleteUser">ELIMINAR UN USUARIO</button>
+
+    <div id='inputData'>
+        <h3>Nombre de Usuario</h3>
+        <input type="text" id="username" class="inputData">
+        <br>
+        <h3>Nombre y Apellido</h3>
+        <input type="text" id="name" class="inputData">
+        <br>
+        <h3>Correo Electronico</h3>
+        <input type="text" id="email" class="inputData">
+        <br>
+        <h3>Contraseña</h3>
+        <input type="password" id="password" class="inputData">
+        <br>
+        <br>
+        <br>
+        <button id="send">ENVIAR DATOS</button>
+    </div>  
+
+<div id="inputDelete">
+    <h3>Nombre del usuario a eliminar</h3>
+    <input type="text" id="userDelete" class="inputData">
+    <button id="sendDelete">ENVIAR DATOS</button>
+</div>
+
+    <h3 id="msj"></h3>
+
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

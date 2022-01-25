@@ -1,0 +1,28 @@
+body{
+    background-color: #000000;
+}
+
+#msj{
+    font-size: 50px;
+}
+
+.inputData{
+    font-size: 30px;
+}
+
+#inputData{
+    display: none;
+    color: #015fac;
+    font-size: 30px;
+}
+
+#inputDelete{
+    display: none;
+    color: #015fac;
+    font-size: 30px;
+}
+
+
+button{
+    font-size: 25px;
+}

@@ -1,0 +1,33 @@
+version: '3'
+services:
+  sprint2:
+    build: .
+    volumes:
+      - ./app/:/usr/src/app
+    container_name: nodedocker
+ #   restart: always
+#    command: nodemon clase24/conexion_sequelize/index.js
+#    command: npm start
+    ports:
+      - ${NODE_PORT}:3000
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root
+#      MONGO_INITDB_ROOT_PASSWORD: example
+    expose:
+      - "27017"
+    volumes:
+      - ./mongodata:/data/db
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express
+    restart: always
+    ports:
+      - 8888:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/

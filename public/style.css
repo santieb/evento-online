@@ -1,0 +1,48 @@
+body {
+    background-color: #CDCDCD;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 200px;
+  }
+  
+  .header {
+    margin: 0;
+    text-align:center;
+    display: inline-block;
+    padding: 50px;
+  }
+  
+  .form {
+    border-radius: 8px;
+    background: #fff;
+    width: 500px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 15px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    resize: vertical;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .form-content {
+    margin: 18px;
+  }
