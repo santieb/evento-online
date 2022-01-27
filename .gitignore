@@ -1,3 +1,4 @@
-app/node_modules
+/node_modules
 mongodata
+/.env
 app/log.txt

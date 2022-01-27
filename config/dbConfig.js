@@ -1,6 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 
-const URI = process.env.MONGODB_URL || 'mongodb://localhost:27017/online-event'
+const URI = process.env.MONGODB_URL
 mongoose.connect(
   URI,
   {
