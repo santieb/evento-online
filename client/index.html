@@ -2,6 +2,8 @@
 <html>
 
 <head>
+	<meta name="google-signin-client_id"
+		content="611469901566-cjk7vtbu480nfqat55pe2s5pnpsncfcp.apps.googleusercontent.com">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>event online</title>
@@ -13,21 +15,42 @@
 		<div class="header">
 			<h1>Último Encuentro</h1>
 			<h2> Argentina vs Colombia </h2>
-			<img src="https://st3.depositphotos.com/1004185/31825/i/1600/depositphotos_318254930-stock-photo-argentina-vs-colombia-colombian-smoky.jpg" title="Descargar - Argentina vs Colombia, banderas de fuego místicas ahumadas colombianas colocadas una al lado de la otra. concepto de banderas de humo abstracto sedoso de color grueso — Imagen de stock"  alt="Argentina vs Colombia, banderas de fuego místicas ahumadas colombianas colocadas una al lado de la otra. concepto de banderas de humo abstracto sedoso de color grueso — Foto de Stock" height="300" width="500">
+			<img
+				src="https://st3.depositphotos.com/1004185/31825/i/1600/depositphotos_318254930-stock-photo-argentina-vs-colombia-colombian-smoky.jpg"
+				title="Descargar - Argentina vs Colombia, banderas de fuego místicas ahumadas colombianas colocadas una al lado de la otra. concepto de banderas de humo abstracto sedoso de color grueso — Imagen de stock"
+				alt="Argentina vs Colombia, banderas de fuego místicas ahumadas colombianas colocadas una al lado de la otra. concepto de banderas de humo abstracto sedoso de color grueso — Foto de Stock"
+				height="300" width="500">
 		</div>
-	  <div class="form">
-      <h3> Registrate </h>
-		<form  name="form" method="GET">
-			<input class="form-content" type="text" id="name" placeholder="name">
-			<input class="form-content" type="text" id="lastname" placeholder="last name">
-			<input class="form-content" type="text" id="email" placeholder="email">
-			<button class="form-content" id="send">Registrarse</button>
-			<p>O registrate con </p>
-			<button class="form-content">Google</button>
-		</form>
-    </div>
+		<div class="form">
+			<h3> Registrate </h>
+				<form name="form" method="GET">
+					<input class="form-content" type="text" id="name" placeholder="name">
+					<input class="form-content" type="text" id="lastname" placeholder="last name">
+					<input class="form-content" type="text" id="email" placeholder="email">
+					<button class="form-content" id="send">Registrarse</button>
+					<p>O registrate con </p>
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					<a href="#" onclick="signOut();">Sign out</a>
+				</form>
+		</div>
 	</div>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	<script src="index.js"></script>
-  </body>
-	
+	<script>
+		const onSignIn = (googleUser) => {
+			const profile = googleUser.getBasicProfile()
+			console.log('ID: ' + profile.getId())
+			console.log('Name: ' + profile.getName())
+			console.log('Image URL: ' + profile.getImageUrl())
+			console.log('Email: ' + profile.getEmail())
+		}
+		const signOut = () => {
+			var auth2 = gapi.auth2.getAuthInstance()
+			auth2.signOut().then(function () {
+				console.log('User signed out.')
+			})
+		}
+	</script>
+</body>
+
 </html>
