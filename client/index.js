@@ -19,7 +19,7 @@ const newUser = async (dataInput) => {
     body: JSON.stringify(data)
   }
 
-  await fetch('http://localhost:5000/users/register', requestOptions)
+  await fetch('http://localhost:5500/users/register', requestOptions)
     .then(res => res.json())
     .then(res => console.log(res))
     .catch((err) => console.log('err:', err))
