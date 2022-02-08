@@ -24,8 +24,11 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "mongoose": "^6.1.8",
+    "mongoose-findorcreate": "^3.0.0",
     "passport": "^0.5.2",
-    "passport-facebook": "^3.0.0"
+    "passport-facebook": "^3.0.0",
+    "passport-instagram": "^1.0.0",
+    "passport-twitter": "^1.0.4"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

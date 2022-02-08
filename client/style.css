@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat&family=Roboto:wght@300;400;700&display=swap');
+
 body {
     background-color: #CDCDCD;
+    font-family: 'Roboto', sans-serif
   }
   
   .container {
@@ -19,14 +22,15 @@ body {
     border-radius: 8px;
     background: #fff;
     width: 500px;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     box-shadow: 15px;
+    text-align: center;
   }
   
   input[type=text], select, textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -34,7 +38,7 @@ body {
   }
   
   button {
-    width: 100%;
+    width: 30%;
     padding: 12px;
     border: 1px solid #000;
     border-radius: 4px;
@@ -45,4 +49,18 @@ body {
   
   .form-content {
     margin: 18px;
+  }
+
+  .form__title{
+    font-size: em;
+  }
+
+  button:hover {
+    border: 2px solid #000;
+  }
+
+  .form__login-with {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
   }

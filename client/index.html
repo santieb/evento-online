@@ -22,17 +22,20 @@
 				height="300" width="500">
 		</div>
 		<div class="form">
-			<h3> Registrate </h>
+			<h3 class="title"> Registrate </h>
 				<form name="form" method="GET">
 					<input class="form-content" type="text" id="name" placeholder="name">
 					<input class="form-content" type="text" id="lastname" placeholder="last name">
 					<input class="form-content" type="text" id="email" placeholder="email">
 					<button class="form-content" id="send">Registrarse</button>
 					<p>O registrate con </p>
-					<div class="g-signin2" data-onsuccess="onSignIn"></div>
-					<a href="#" onclick="signOut();">Sign out</a>
+					<div class="form__login-with">
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+						<a href="#" onclick="signOut();">Sign out</a>
+						<a href="http://localhost:5500/auth/facebook"> Facebook</a>
+					</div>
 				</form>
-				<a href="http://localhost:5500/auth/facebook"> Facebook</a>
+
 		</div>
 	</div>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
