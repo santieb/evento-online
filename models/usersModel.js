@@ -1,4 +1,5 @@
 const mongoose = require('../config/dbConfig')
+const findOrCreate = require('mongoose-findorcreate')
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -19,6 +20,8 @@ const userSchema = new mongoose.Schema({
 }, {
   timestamps: true
 })
+
+userSchema.plugin(findOrCreate);
 
 const users = mongoose.model('Users', userSchema)
 
