@@ -13,14 +13,10 @@ passport.use(new FacebookStrategy({
   User.findOrCreate({ facebookId: profile.id }, function (err, user) {
     return cb(err, user)
   })
-  passport.serializeUser(function (user, done) {
-    done(null, user.facebookId)
-  })
 }
 ))
 
-router.get('/auth/facebook',
-  passport.authenticate('facebook'))
+router.get('/auth/facebook', passport.authenticate('facebook'))
 
 router.get('/auth/facebook/event-online',
   passport.authenticate('facebook', { failureRedirect: '/login' }),

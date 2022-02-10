@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema({
   facebookId: {
     type: String,
     unique: true
+  },
+  spotifyId: {
+    type: String,
+    unique: true
   }
 }, {
   timestamps: true
